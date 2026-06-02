@@ -1,0 +1,545 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='simulator_testing'>
+      <static>true</static>
+      <link name='revolver'>
+        <pose>-0.085411403364876307 -0.0050579499525014058 0.040000000000000945 -6.0271177877858067e-15 3.3859875461591097e-16 0.92337817664279298</pose>
+        <inertial>
+          <mass>5.9711228836708825</mass>
+          <pose>0.075000000000033026 0.075000000000035663 0.023182453122701608 0 0 0</pose>
+          <inertia>
+            <ixx>0.0095880849672499782</ixx>
+            <iyy>0.0095641349738253435</iyy>
+            <izz>0.015856642108782244</izz>
+            <ixy>-6.2363308961366235e-16</ixy>
+            <iyz>-7.3333868815660474e-17</iyz>
+            <ixz>3.2014200946103394e-17</ixz>
+          </inertia>
+        </inertial>
+        <visual name='revolver_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/revolver.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='revolver_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/revolver.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='link1'>
+        <pose>-0.16441146733367518 0.031395446087236711 0.10358015340494006 7.136196367030865e-15 -0.59447295733378369 -2.2182144769470038</pose>
+        <inertial>
+          <mass>0.63581525640276637</mass>
+          <pose>-0.051973873129431296 0.010000000000004519 0.07833118741070591 0 0 0</pose>
+          <inertia>
+            <ixx>0.00039365238193329519</ixx>
+            <iyy>0.00074491707913871728</iyy>
+            <izz>0.00039365238096768939</izz>
+            <ixy>-4.4071845806854004e-17</ixy>
+            <iyz>-2.6064254235233597e-17</iyz>
+            <ixz>-0.00022229726202432128</ixz>
+          </inertia>
+        </inertial>
+        <visual name='link1_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link1.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='link1_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link1.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='link2'>
+        <pose>-0.053841151144245869 0.20249600024798681 0.11541152728843834 3.1415926535897594 1.3851103930451547 0.92337817664276711</pose>
+        <inertial>
+          <mass>1.180553771679437</mass>
+          <pose>-0.11500000000000002 0.024999999999999953 0.11000000000000065 0 0 0</pose>
+          <inertia>
+            <ixx>0.00060098067543611956</ixx>
+            <iyy>0.0011948662647461434</iyy>
+            <izz>0.0012289275249762832</izz>
+            <ixy>6.59066405526699e-18</ixy>
+            <iyz>-4.0755343682199718e-17</iyz>
+            <ixz>-2.3134163855409451e-17</ixz>
+          </inertia>
+        </inertial>
+        <visual name='link2_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link2.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='link2_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link2.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='end_dummy'>
+        <pose>-0.16774992694608898 0.068430803021834047 0.25391559511067008 6.277343005218493e-15 -0.28565960074660363 -2.2182144769470002</pose>
+        <inertial>
+          <mass>1.6779114400508648</mass>
+          <pose>-0.071099975864010165 0.034999999914959813 0.070000000000157506 0 0 0</pose>
+          <inertia>
+            <ixx>0.0011389509265859062</ixx>
+            <iyy>0.0012315613706749195</iyy>
+            <izz>0.0014030528817277482</izz>
+            <ixy>4.6637867153878907e-12</ixy>
+            <iyz>7.1588873279483569e-19</iyz>
+            <ixz>-8.3302435045437551e-13</ixz>
+          </inertia>
+        </inertial>
+        <visual name='end_dummy_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/end_dummy.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='end_dummy_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/end_dummy.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='link3'>
+        <pose>-0.15917898666396185 0.038315449594078066 0.20308166052557297 6.1376885339527509e-15 -0.19365437092685051 -2.2182144769470034</pose>
+        <inertial>
+          <mass>0.63581525815737949</mass>
+          <pose>-0.050000000000023748 0.010000000000005017 0.085000000000052603 0 0 0</pose>
+          <inertia>
+            <ixx>0.00061594964436674461</ixx>
+            <iyy>0.00074491708027841835</iyy>
+            <izz>0.00017135511979063064</izz>
+            <ixy>-6.601193703916004e-17</ixy>
+            <iyz>4.2505184983184164e-17</iyz>
+            <ixz>4.3694702803881436e-16</ixz>
+          </inertia>
+        </inertial>
+        <visual name='link3_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link3.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='link3_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/link3.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='base'>
+        <pose>0.050000000000002043 0.050000000000001238 -1.3877787807814457e-17 1.4754428933329486e-31 6.1232330276357978e-17 -7.8756537130083789e-16</pose>
+        <inertial>
+          <mass>19.571161975597029</mass>
+          <pose>-0.15000000000001318 0.050000000000002841 0.034329577332893095 0 0 0</pose>
+          <inertia>
+            <ixx>0.085738947776993729</ixx>
+            <iyy>0.085738947776967556</iyy>
+            <izz>0.15186055972301593</izz>
+            <ixy>-3.9107291993812844e-16</ixy>
+            <iyz>4.2934242153136979e-15</iyz>
+            <ixz>3.1333852330176204e-15</ixz>
+          </inertia>
+        </inertial>
+        <visual name='base_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/base.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='base_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/base.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='joint1'>
+        <pose>-0.11021536000785831 0.045039592251226668 0.055000000000007709 -6.0271177877858603e-15 3.3859875461602811e-16 0.92337817664281219</pose>
+        <inertial>
+          <mass>0.27744190122014861</mass>
+          <pose>0.05000000000002746 0.025000000000012446 0.050000000000041081 0 0 0</pose>
+          <inertia>
+            <ixx>7.3406503031047001e-05</ixx>
+            <iyy>3.1212213886990434e-05</iyy>
+            <izz>7.3406503031527167e-05</izz>
+            <ixy>2.751163012681965e-17</ixy>
+            <iyz>-1.4880590494767308e-18</iyz>
+            <ixz>4.3222462168616329e-18</ixz>
+          </inertia>
+        </inertial>
+        <visual name='joint1_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint1.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='joint1_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint1.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='joint2'>
+        <pose>-0.082893555567605137 -0.039287710904757744 0.35959297222515579 -3.7584589250646142e-14 1.3851103930451554 0.92337817664273969</pose>
+        <inertial>
+          <mass>0.27744190122014861</mass>
+          <pose>0.19882435886840186 0.097653307542265463 0.051682176765227142 0 0 0</pose>
+          <inertia>
+            <ixx>7.3406503031921166e-05</ixx>
+            <iyy>3.1212213886133982e-05</iyy>
+            <izz>7.3406503030199236e-05</izz>
+            <ixy>-5.4199311539268101e-17</ixy>
+            <iyz>4.3310197607431333e-18</iyz>
+            <ixz>-6.0656029352880447e-16</ixz>
+          </inertia>
+        </inertial>
+        <visual name='joint2_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint2.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='joint2_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint2.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='joint3'>
+        <pose>0.10975244333004586 0.2154883832844986 0.34110281621737054 -3.1415926535897873 0.18568593374975551 -2.2182144769469949</pose>
+        <inertial>
+          <mass>0.27744190122014861</mass>
+          <pose>0.25882435886835226 0.097653307542251461 0.051682176765231347 0 0 0</pose>
+          <inertia>
+            <ixx>7.3406503031066909e-05</ixx>
+            <iyy>3.1212213887113477e-05</iyy>
+            <izz>7.3406503031479259e-05</izz>
+            <ixy>9.793798978727794e-18</ixy>
+            <iyz>-2.2323048351010758e-17</iyz>
+            <ixz>2.8268369361896667e-16</ixz>
+          </inertia>
+        </inertial>
+        <visual name='joint3_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint3.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='joint3_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint3.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <link name='joint4'>
+        <pose>0.16928147539419924 0.29421607224222018 0.26814451674152856 -3.1415926535897869 -0.28565960074660429 -2.218214476947026</pose>
+        <inertial>
+          <mass>0.27744190122014867</mass>
+          <pose>0.32882435886846195 0.097653307542280576 0.051682176765231146 0 0 0</pose>
+          <inertia>
+            <ixx>7.3406503031560804e-05</ixx>
+            <iyy>3.1212213884283967e-05</iyy>
+            <izz>7.3406503033291787e-05</izz>
+            <ixy>6.4387803069918338e-16</ixy>
+            <iyz>1.5837520875229043e-16</iyz>
+            <ixz>-1.6506639262912903e-15</ixz>
+          </inertia>
+        </inertial>
+        <visual name='joint4_visual'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint4.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='joint4_collision'>
+          <geometry>
+            <mesh>
+              <uri>file:///home/cap/.gz/models/simulator_testing/meshes/joint4.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='base_Revolute-1' type='revolute'>
+        <pose>0.075000000000033706 0.075000000000031597 -4.7878367936959876e-16 1.97215226305253e-31 0 0</pose>
+        <parent>base</parent>
+        <child>revolver</child>
+        <axis>
+          <xyz>-3.3859875461591057e-16 -6.0271177877858051e-15 1</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='revolver_Revolute-2' type='revolute'>
+        <pose>-0.076722610412456871 0.010000000000009307 0.05358245008865109 0 5.5511151231257827e-17 0</pose>
+        <parent>revolver</parent>
+        <child>link1</child>
+        <axis>
+          <xyz>-1.9253380001416071e-07 0.99999999999997302 1.3016311414815182e-07</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='link1_Revolute-3' type='revolute'>
+        <pose>-0.080000036149412326 0.025000034243277403 0.1100003858142768 0 0 0</pose>
+        <parent>link1</parent>
+        <child>link2</child>
+        <axis>
+          <xyz>-4.2906630581818219e-08 -0.99999999999997302 2.2840910213206564e-07</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='link2_Revolute-4' type='revolute'>
+        <pose>-0.050000110150368357 0.010000253642559603 0.050000302044042488 0 0 0</pose>
+        <parent>link2</parent>
+        <child>link3</child>
+        <axis>
+          <xyz>-2.2805996491293001e-07 0.99999999999997302 4.4725302045245385e-08</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='link3_Revolute-5' type='revolute'>
+        <pose>-0.035000103506876393 0.035000486608738723 0.069999768651326261 0 0 0</pose>
+        <parent>link3</parent>
+        <child>end_dummy</child>
+        <axis>
+          <xyz>-2.229862210434419e-07 0.99999999999997313 6.548925364502356e-08</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='revolver_Rigid-10' type='fixed'>
+        <pose>0.050000124967051217 2.0870118586091557e-07 0.050000000000012902 0 0 0</pose>
+        <parent>revolver</parent>
+        <child>joint1</child>
+      </joint>
+      <joint name='link2_Rigid-11' type='fixed'>
+        <pose>0.19882434579049146 0.072653482000166719 0.051681913769771604 0 1.1102230246251565e-16 0</pose>
+        <parent>link2</parent>
+        <child>joint2</child>
+      </joint>
+      <joint name='link2_Rigid-12' type='fixed'>
+        <pose>0.25882402188063375 0.072653262600879093 0.051681960054817871 -4.9652881378733441e-34 3.4694469519536148e-17 -2.8622937353617323e-17</pose>
+        <parent>link2</parent>
+        <child>joint3</child>
+      </joint>
+      <joint name='end_dummy_Rigid-13' type='fixed'>
+        <pose>0.32882413545872557 0.072653029336719271 0.051682372899400364 4.8148248609680896e-35 6.9388939039072284e-18 1.3877787807814457e-17</pose>
+        <parent>end_dummy</parent>
+        <child>joint4</child>
+      </joint>
+      <pose>0.41463199257850647 0.16881200671195984 0.0035024322569370131 0 0 1.1102230246251568e-16</pose>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

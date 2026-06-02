@@ -1,0 +1,64 @@
+[0.033s] Invoking command in '/home/cap/ros2_ws/build/my_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/cap/ros2_ws/src/my_robot_arm -DCMAKE_INSTALL_PREFIX=/home/cap/ros2_ws/install/my_robot_arm
+[0.213s] -- The C compiler identification is GNU 13.3.0
+[0.332s] -- The CXX compiler identification is GNU 13.3.0
+[0.369s] -- Detecting C compiler ABI info
+[0.486s] -- Detecting C compiler ABI info - done
+[0.493s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.494s] -- Detecting C compile features
+[0.495s] -- Detecting C compile features - done
+[0.513s] -- Detecting CXX compiler ABI info
+[0.633s] -- Detecting CXX compiler ABI info - done
+[0.640s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.641s] -- Detecting CXX compile features
+[0.641s] -- Detecting CXX compile features - done
+[0.694s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.842s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.012s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.127s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.127s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.128s] -- Added test 'lint_cmake' to check CMake code style
+[1.130s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.133s] -- Added test 'xmllint' to check XML markup files
+[1.137s] -- Configuring done (1.1s)
+[1.141s] -- Generating done (0.0s)
+[1.142s] -- Build files have been written to: /home/cap/ros2_ws/build/my_robot_arm
+[1.148s] Invoked command in '/home/cap/ros2_ws/build/my_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/cap/ros2_ws/src/my_robot_arm -DCMAKE_INSTALL_PREFIX=/home/cap/ros2_ws/install/my_robot_arm
+[1.149s] Invoking command in '/home/cap/ros2_ws/build/my_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cap/ros2_ws/build/my_robot_arm -- -j8 -l8
+[1.201s] Invoked command in '/home/cap/ros2_ws/build/my_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cap/ros2_ws/build/my_robot_arm -- -j8 -l8
+[1.215s] Invoking command in '/home/cap/ros2_ws/build/my_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cap/ros2_ws/build/my_robot_arm
+[1.227s] -- Install configuration: ""
+[1.228s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/launch
+[1.228s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/launch/arm_launch.py
+[1.229s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf
+[1.229s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/simulator_testing.sdf
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link3.stl
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/end_dummy.stl
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint2.stl
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint3.stl
+[1.230s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint1.stl
+[1.231s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/base.stl
+[1.231s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/revolver.stl
+[1.231s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link1.stl
+[1.231s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link2.stl
+[1.231s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint4.stl
+[1.232s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/model.config
+[1.232s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/worlds
+[1.232s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/worlds/empty_world.sdf
+[1.232s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/package_run_dependencies/my_robot_arm
+[1.232s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/parent_prefix_path/my_robot_arm
+[1.233s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/ament_prefix_path.sh
+[1.233s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/ament_prefix_path.dsv
+[1.233s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/path.sh
+[1.233s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/path.dsv
+[1.233s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.bash
+[1.234s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.sh
+[1.234s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.zsh
+[1.234s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.dsv
+[1.234s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/package.dsv
+[1.234s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/packages/my_robot_arm
+[1.235s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/cmake/my_robot_armConfig.cmake
+[1.235s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/cmake/my_robot_armConfig-version.cmake
+[1.235s] -- Installing: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/package.xml
+[1.237s] Invoked command in '/home/cap/ros2_ws/build/my_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cap/ros2_ws/build/my_robot_arm
