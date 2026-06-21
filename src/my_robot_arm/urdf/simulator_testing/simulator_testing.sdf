@@ -22,6 +22,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.3 0.3 0.3 1</ambient>
+                    <diffuse>0.3 0.3 0.3 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                </material>
             </visual>
             <collision name="revolver_collision">
                 <geometry>
@@ -53,6 +58,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>1 0.5 0.0 1</ambient>
+                    <diffuse>1 0.5 0.0 1</diffuse>
+                    <specular>0.2 0.2 0.2 1</specular>
+                </material>
             </visual>
             <collision name="link1_collision">
                 <geometry>
@@ -84,6 +94,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>1 0.5 0.0 1</ambient>
+                    <diffuse>1 0.5 0.0 1</diffuse>
+                    <specular>0.2 0.2 0.2 1</specular>
+                </material>
             </visual>
             <collision name="link2_collision">
                 <geometry>
@@ -115,6 +130,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0.9 0.9 0.9 1</specular>
+                </material>
             </visual>
             <collision name="end_dummy_collision">
                 <geometry>
@@ -146,6 +166,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>1 0.5 0.0 1</ambient>
+                    <diffuse>1 0.5 0.0 1</diffuse>
+                    <specular>0.2 0.2 0.2 1</specular>
+                </material>
             </visual>
             <collision name="link3_collision">
                 <geometry>
@@ -177,6 +202,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.5 0.5 0.5 1</ambient>
+                    <diffuse>0.5 0.5 0.5 1</diffuse>
+                    <specular>0.2 0.2 0.2 1</specular>
+                </material>
             </visual>
             <collision name="base_collision">
                 <geometry>
@@ -208,6 +238,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0.9 0.9 0.9 1</specular>
+                </material>
             </visual>
             <collision name="joint1_collision">
                 <geometry>
@@ -239,6 +274,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0.9 0.9 0.9 1</specular>
+                </material>
             </visual>
             <collision name="joint2_collision">
                 <geometry>
@@ -270,6 +310,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0.9 0.9 0.9 1</specular>
+                </material>
             </visual>
             <collision name="joint3_collision">
                 <geometry>
@@ -301,6 +346,11 @@
                         <scale>0.001 0.001 0.001</scale>
                     </mesh>
                 </geometry>
+                <material>
+                    <ambient>0.7 0.7 0.7 1</ambient>
+                    <diffuse>0.7 0.7 0.7 1</diffuse>
+                    <specular>0.9 0.9 0.9 1</specular>
+                </material>
             </visual>
             <collision name="joint4_collision">
                 <geometry>

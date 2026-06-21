@@ -1,0 +1,35 @@
+[0.014s] Invoking command in '/home/cap/ros2_ws/build/my_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cap/ros2_ws/build/my_robot_arm -- -j8 -l8
+[0.072s] Invoked command in '/home/cap/ros2_ws/build/my_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/cap/ros2_ws/build/my_robot_arm -- -j8 -l8
+[0.086s] Invoking command in '/home/cap/ros2_ws/build/my_robot_arm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cap/ros2_ws/build/my_robot_arm
+[0.096s] -- Install configuration: ""
+[0.096s] -- Execute custom install script
+[0.097s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/launch/arm_launch.py
+[0.097s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/base.stl
+[0.097s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/end_dummy.stl
+[0.097s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint1.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint2.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint3.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/joint4.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link1.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link2.stl
+[0.098s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/link3.stl
+[0.099s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/meshes/revolver.stl
+[0.099s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/model.config
+[0.099s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/urdf/simulator_testing/simulator_testing.sdf
+[0.099s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/worlds/empty_world.sdf
+[0.099s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/package_run_dependencies/my_robot_arm
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/parent_prefix_path/my_robot_arm
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/ament_prefix_path.sh
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/ament_prefix_path.dsv
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/path.sh
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/environment/path.dsv
+[0.100s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.bash
+[0.101s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.sh
+[0.101s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.zsh
+[0.101s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/local_setup.dsv
+[0.101s] -- Symlinking: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/package.dsv
+[0.113s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/ament_index/resource_index/packages/my_robot_arm
+[0.113s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/cmake/my_robot_armConfig.cmake
+[0.113s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/cmake/my_robot_armConfig-version.cmake
+[0.113s] -- Up-to-date symlink: /home/cap/ros2_ws/install/my_robot_arm/share/my_robot_arm/package.xml
+[0.116s] Invoked command in '/home/cap/ros2_ws/build/my_robot_arm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/cap/ros2_ws/build/my_robot_arm

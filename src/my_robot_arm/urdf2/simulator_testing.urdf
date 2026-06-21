@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="simulator_testing">
+    <link name="revolver">
+        <inertial>
+            <origin xyz="-3.801403636316536e-15 2.0605739337042904e-15 0.023182453122692247" rpy="0.0 -0.0 4.262392869255129e-94" />
+            <mass value="1.1721656514314434" />
+            <inertia ixx="0.0018792047686007653" iyy="0.0018804857956264166" izz="0.003112749743899707" ixy="2.2618172723747054e-06" iyz="1.734723475976807e-18" ixz="8.673617379884034e-18" />
+        </inertial>
+        <visual name="revolver_visual">
+            <origin xyz="0.01458859663512369 -0.1050579499525014 9.414691248821328e-16" rpy="-6.027117787785807e-15 3.3859875461591067e-16 0.9233781766427931" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/revolver.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="revolver_collision">
+            <origin xyz="0.01458859663512369 -0.1050579499525014 9.414691248821328e-16" rpy="-6.027117787785807e-15 3.3859875461591067e-16 0.9233781766427931" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/revolver.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </collision>
+    </link>
+    <link name="link1">
+        <inertial>
+            <origin xyz="-0.004005897273835899 0.03436401780173011 0.005297835755685352" rpy="0.0 1.244603055573015e-60 -3.503246160812043e-46" />
+            <mass value="0.6358152564027664" />
+            <inertia ixx="0.0006921792051654166" iyy="0.0001873657037834851" izz="0.0006526769330892318" ixy="4.996107389943666e-05" iyz="-6.60739768406688e-05" ixz="6.97463203153938e-05" />
+        </inertial>
+        <visual name="link1_visual">
+            <origin xyz="-0.06441146733368902 -0.0014198465950604167 0.06860455391277989" rpy="2.208319213478555 -0.7218880305750451 2.299247578995253" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange_mat">
+                <color rgba="1.0 0.5 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision name="link1_collision">
+            <origin xyz="-0.06441146733368902 -0.0014198465950604167 0.06860455391277989" rpy="2.208319213478555 -0.7218880305750451 2.299247578995253" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link2">
+        <inertial>
+            <origin xyz="-0.0038972585803014504 0.03439834025064439 0.005154155587659624" rpy="0.0 -1.5733313455866407e-32 0.0" />
+            <mass value="1.180553771679437" />
+            <inertia ixx="0.0011994707285799652" iyy="0.000622384124500625" izz="0.001202919612076192" ixy="6.871998396871014e-05" iyz="-9.088280685049642e-05" ixz="-6.0894455028065005e-06" />
+        </inertial>
+        <visual name="link2_visual">
+            <origin xyz="0.05417063885576494 -0.05831651271157954 -0.11309167024801253" rpy="0.6557792780050299 0.14779905682481825 -1.457979684927346" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange_mat">
+                <color rgba="1.0 0.5 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision name="link2_collision">
+            <origin xyz="0.05417063885576494 -0.05831651271157954 -0.11309167024801253" rpy="0.6557792780050299 0.14779905682481825 -1.457979684927346" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="end_dummy">
+        <inertial>
+            <origin xyz="0.02089061743729568 0.010172624906862424 0.02762802720546146" rpy="0.0 -2.8770913885392433e-34 -1.232595164407831e-32" />
+            <mass value="1.6779114400508648" />
+            <inertia ixx="0.0012055015561048235" iyy="0.0013820816488838076" izz="0.0011859819739977531" ixy="-4.306675391129915e-05" iyz="-5.6956173468235444e-05" ixz="-3.4464338461307294e-05" />
+        </inertial>
+        <visual name="end_dummy_visual">
+            <origin xyz="-0.06006851694610974 0.05730065488934855 -0.021410466978170072" rpy="-1.2140696453048883 0.8715382343345166 -2.688441745221721" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/end_dummy.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="silver_mat">
+                <color rgba="0.7 0.7 0.7 1.0"/>
+            </material>
+        </visual>
+        <collision name="end_dummy_collision">
+            <origin xyz="-0.06006851694610974 0.05730065488934855 -0.021410466978170072" rpy="-1.2140696453048883 0.8715382343345166 -2.688441745221721" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/end_dummy.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="link3">
+        <inertial>
+            <origin xyz="0.004062444237607039 -0.03434576797034996 0.00537262342377467" rpy="0.0 -5.6906679425414235e-33 0.0" />
+            <mass value="0.6358152581573795" />
+            <inertia ixx="0.0006920136134116255" iyy="0.00018782092380346325" izz="0.0006523873072199235" ixy="5.063943824628055e-05" iyz="6.697111988912317e-05" ixz="-6.996531843096904e-05" />
+        </inertial>
+        <visual name="link3_visual">
+            <origin xyz="-0.04337268666396227 0.03944305947442718 -0.04078057040592286" rpy="-1.3215756957194509 0.8990462699941579 -2.827218113584762" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange_mat">
+                <color rgba="1.0 0.5 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision name="link3_collision">
+            <origin xyz="-0.04337268666396227 0.03944305947442718 -0.04078057040592286" rpy="-1.3215756957194509 0.8990462699941579 -2.827218113584762" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/link3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base">
+        <inertial>
+            <origin xyz="-0.15000000000001318 0.05000000000000284 0.034329577332893095" rpy="0.0 0.0 0.0" />
+            <mass value="19.57116197559703" />
+            <inertia ixx="0.08573894777699373" iyy="0.08573894777696756" izz="0.15186055972301593" ixy="-3.9107291993812844e-16" iyz="4.293424215313698e-15" ixz="3.1333852330176204e-15" />
+        </inertial>
+        <visual name="base_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="base_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="joint1">
+        <inertial>
+            <origin xyz="-0.01994109000000371 -2.806643806252396e-14 0.015078230000002026" rpy="0.0 -2.698802673467102e-78 0.0" />
+            <mass value="0.2774419012201486" />
+            <inertia ixx="4.656100333044408e-05" iyy="7.3406503031467e-05" izz="5.805771358753912e-05" ixy="-3.469446951953614e-18" iyz="-2.60208521396521e-18" ixz="2.0298914316008072e-05" />
+        </inertial>
+        <visual name="joint1_visual">
+            <origin xyz="-0.03015645000785808 0.04999999999999227 -0.039882177748773215" rpy="1.5707963267948886 -0.9233781766428123 5.614035176557584e-16" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="joint1_collision">
+            <origin xyz="-0.03015645000785808 0.04999999999999227 -0.039882177748773215" rpy="1.5707963267948886 -0.9233781766428123 5.614035176557584e-16" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="joint2">
+        <inertial>
+            <origin xyz="-0.01994109459298297 -4.298689120219023e-09 -0.01507822842870123" rpy="0.0 -0.0 -1.7105694144590052e-49" />
+            <mass value="0.2774419012201486" />
+            <inertia ixx="4.656100332957845e-05" iyy="7.340650303205853e-05" izz="5.805771358657373e-05" ixy="1.0841813632645815e-16" iyz="-2.333177741008661e-16" ixz="-2.0298914315951697e-05" />
+        </inertial>
+        <visual name="joint2_visual">
+            <origin xyz="0.005177144432394734 0.18586493222515574 0.11361381090475874" rpy="-2.4858133755847605 0.1477990568248236 -1.4579796849272189" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="joint2_collision">
+            <origin xyz="0.005177144432394734 0.18586493222515574 0.11361381090475874" rpy="-2.4858133755847605 0.1477990568248236 -1.4579796849272189" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="joint3">
+        <inertial>
+            <origin xyz="-0.019941092567628455 4.79995716062831e-09 -0.015078230395983612" rpy="0.0 -0.0 -1.7105694144590052e-49" />
+            <mass value="0.2774419012201486" />
+            <inertia ixx="4.656100333055857e-05" iyy="7.340650303156327e-05" izz="5.8057713587529564e-05" ixy="9.71424337326089e-17" iyz="-1.6219411158581693e-16" ixz="-2.0298914315938253e-05" />
+        </inertial>
+        <visual name="joint3_visual">
+            <origin xyz="0.20561765333004672 0.09857809621737058 -0.15147059328449874" rpy="-1.8102734547254573 -0.9009740634284075 -2.8396565621468515" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="joint3_collision">
+            <origin xyz="0.20561765333004672 0.09857809621737058 -0.15147059328449874" rpy="-1.8102734547254573 -0.9009740634284075 -2.8396565621468515" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="joint4">
+        <inertial>
+            <origin xyz="-0.019941088957150407 1.1407420785758405e-09 -0.01507822645156156" rpy="0.0 -0.0 0.0" />
+            <mass value="0.27744190122014867" />
+            <inertia ixx="4.656100332930613e-05" iyy="7.340650303401444e-05" izz="5.8057713585749765e-05" ixy="-5.776653402664441e-16" iyz="7.147068833074345e-16" ixz="-2.0298914317385456e-05" />
+        </inertial>
+        <visual name="joint4_visual">
+            <origin xyz="0.25702179539420783 -0.043071733258471384 -0.21945303224222518" rpy="-1.2140696453049236 -0.8715382343345256 2.688441745221755" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="grey_mat">
+                <color rgba="0.3 0.3 0.3 1.0"/>
+            </material>
+        </visual>
+        <collision name="joint4_collision">
+            <origin xyz="0.25702179539420783 -0.043071733258471384 -0.21945303224222518" rpy="-1.2140696453049236 -0.8715382343345256 2.688441745221755" />
+            <geometry>
+                <mesh filename="file:///home/cap/ros2_ws/src/my_robot_arm/urdf2/meshes/joint4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_Revolute-1" type="continuous">
+        <origin xyz="-0.14999999999999578 0.04999999999999713 0.039999999999999404" rpy="-3.4475951563854345e-31 -6.123233027635962e-17 6.76542155630937e-16" />
+        <parent link="base" />
+        <child link="revolver" />
+        <axis xyz="1.232595164407831e-32 0.0 1.0" />
+    </joint>
+    <joint name="revolver_Revolute-2" type="continuous">
+        <origin xyz="0.0 0.0 0.065" rpy="1.5707963267948972 1.5900477620863993e-30 5.55111512312615e-17" />
+        <parent link="revolver" />
+        <child link="link1" />
+        <axis xyz="0.7976439999998218 -2.904762932300824e-16 0.6031289999998488" />
+    </joint>
+    <joint name="link1_Revolute-3" type="continuous">
+        <origin xyz="-0.008011790000001665 0.06872804000002918 0.010595670000002536" rpy="-2.0460524514528942e-17 -1.5354732336605318e-16 1.6653345369384677e-16" />
+        <parent link="link1" />
+        <child link="link2" />
+        <axis xyz="-0.7976439999997268 1.0247194868889025e-13 -0.603128999999859" />
+    </joint>
+    <joint name="link2_Revolute-4" type="continuous">
+        <origin xyz="-0.007794509999993764 0.06879668000002057 0.010308310000002345" rpy="-3.141592653589793 1.3666546538394636e-16 -1.3877787807817708e-16" />
+        <parent link="link2" />
+        <child link="link3" />
+        <axis xyz="0.7976440000000002 -6.771349933936259e-16 -0.6031289999999984" />
+    </joint>
+    <joint name="link3_Revolute-5" type="continuous">
+        <origin xyz="0.00812488999999994 -0.06869153000000015 0.010745250000000066" rpy="-2.1773505013075684e-16 3.3836244552324447e-17 1.1102230246253197e-16" />
+        <parent link="link3" />
+        <child link="end_dummy" />
+        <axis xyz="0.7976439999997694 4.904570044788676e-14 -0.6031289999998691" />
+    </joint>
+    <joint name="revolver_Rigid-10" type="fixed">
+        <origin xyz="0.019941089999999998 -0.015078230000000001 0.065" rpy="-1.5707963267948966 2.588449845256445e-31 5.551115123125969e-17" />
+        <parent link="revolver" />
+        <child link="joint1" />
+    </joint>
+    <joint name="link2_Rigid-11" type="fixed">
+        <origin xyz="0.01994109000000691 3.552713678800501e-17 0.015078230000003403" rpy="1.2297448461658563e-16 1.173508187593623e-16 -1.6653345369380464e-16" />
+        <parent link="link2" />
+        <child link="joint2" />
+    </joint>
+    <joint name="link2_Rigid-12" type="fixed">
+        <origin xyz="0.012146580000013164 0.06879668000002064 0.02538654000000574" rpy="1.2297448461658563e-16 1.173508187593623e-16 -1.6653345369380464e-16" />
+        <parent link="link2" />
+        <child link="joint3" />
+    </joint>
+    <joint name="end_dummy_Rigid-13" type="fixed">
+        <origin xyz="0.01994109000000586 7.105427357601002e-17 -0.015078230000003136" rpy="-3.141592653589793 -1.1442088993958967e-17 -8.326672684690603e-17" />
+        <parent link="end_dummy" />
+        <child link="joint4" />
+    </joint>
+    <ros2_control name="ArmSystem" type="system">
+    <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="base_Revolute-1">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="revolver_Revolute-2">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link1_Revolute-3">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link2_Revolute-4">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link3_Revolute-5">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+</ros2_control>
+
+<gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+        <parameters>/home/cap/ros2_ws/src/my_robot_arm/config/arm_controllers.yaml</parameters>
+    </plugin>
+</gazebo>
+</robot>

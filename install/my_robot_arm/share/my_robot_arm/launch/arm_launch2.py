@@ -1,0 +1,1 @@
+/home/cap/ros2_ws/src/my_robot_arm/launch/arm_launch2.py

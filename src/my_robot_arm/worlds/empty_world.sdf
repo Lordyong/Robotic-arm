@@ -1,9 +1,9 @@
 <sdf version='1.10'>
   <world name='empty'>
-    <physics name='1ms' type='ignored'>
-      <max_step_size>0.001</max_step_size>
+    <physics name='1ms' type='dart'>
+      <max_step_size>0.004</max_step_size>
       <real_time_factor>1</real_time_factor>
-      <real_time_update_rate>1000</real_time_update_rate>
+      <real_time_update_rate>250</real_time_update_rate>
     </physics>
     <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
     <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
@@ -67,7 +67,44 @@
       <self_collide>false</self_collide>
     </model>
     <model name='simulator_testing'>
-      <static>true</static>
+    <plugin filename="gz-sim-joint-state-publisher-system"
+    name="gz::sim::systems::JointStatePublisher">
+    </plugin>
+<plugin filename="gz_ros2_control-system"
+    name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+    <parameters>/home/cap/ros2_ws/src/my_robot_arm/config/arm_controllers.yaml</parameters>
+</plugin>
+<ros2_control name="ArmSystem" type="system">
+    <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="base_Revolute-1">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="revolver_Revolute-2">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link1_Revolute-3">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link2_Revolute-4">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+    <joint name="link3_Revolute-5">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+    </joint>
+</ros2_control>
+      <static>false</static>
       <link name='revolver'>
         <pose>-0.085411403364876307 -0.0050579499525014058 0.040000000000000945 -6.0271177877858067e-15 3.3859875461591097e-16 0.92337817664279298</pose>
         <inertial>
@@ -89,6 +126,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.3 0.3 0.3 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
         </visual>
         <collision name='revolver_collision'>
           <geometry>
@@ -121,6 +163,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>1 0.5 0.0 1</ambient>
+            <diffuse>1 0.5 0.0 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='link1_collision'>
           <geometry>
@@ -153,6 +200,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='link2_collision'>
           <geometry>
@@ -185,6 +237,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>1 0.5 0.0 1</ambient>
+            <diffuse>1.0 0.5 0.0 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='end_dummy_collision'>
           <geometry>
@@ -217,6 +274,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.5 0.5 0.0 1</ambient>
+            <diffuse>0.5.5 0.0 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='link3_collision'>
           <geometry>
@@ -249,6 +311,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='base_collision'>
           <geometry>
@@ -281,6 +348,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='joint1_collision'>
           <geometry>
@@ -313,6 +385,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='joint2_collision'>
           <geometry>
@@ -345,6 +422,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='joint3_collision'>
           <geometry>
@@ -377,6 +459,11 @@
               <scale>0.001 0.001 0.001</scale>
             </mesh>
           </geometry>
+          <material>
+            <ambient>0.7 0.7 0.7 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
         </visual>
         <collision name='joint4_collision'>
           <geometry>
@@ -395,17 +482,17 @@
         <axis>
           <xyz>-3.3859875461591057e-16 -6.0271177877858051e-15 1</xyz>
           <limit>
-            <lower>-inf</lower>
-            <upper>inf</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>1.0</velocity>
+            <stiffness>100</stiffness>
             <dissipation>1</dissipation>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>0.5</damping>
             <friction>0</friction>
           </dynamics>
         </axis>
@@ -417,17 +504,17 @@
         <axis>
           <xyz>-1.9253380001416071e-07 0.99999999999997302 1.3016311414815182e-07</xyz>
           <limit>
-            <lower>-inf</lower>
-            <upper>inf</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>1.0</velocity>
+            <stiffness>100</stiffness>
             <dissipation>1</dissipation>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>0.5</damping>
             <friction>0</friction>
           </dynamics>
         </axis>
@@ -439,17 +526,17 @@
         <axis>
           <xyz>-4.2906630581818219e-08 -0.99999999999997302 2.2840910213206564e-07</xyz>
           <limit>
-            <lower>-inf</lower>
-            <upper>inf</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>1.0</velocity>
+            <stiffness>100</stiffness>
             <dissipation>1</dissipation>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>0.5</damping>
             <friction>0</friction>
           </dynamics>
         </axis>
@@ -461,17 +548,17 @@
         <axis>
           <xyz>-2.2805996491293001e-07 0.99999999999997302 4.4725302045245385e-08</xyz>
           <limit>
-            <lower>-inf</lower>
-            <upper>inf</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>1.0</velocity>
+            <stiffness>100</stiffness>
             <dissipation>1</dissipation>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>0.5</damping>
             <friction>0</friction>
           </dynamics>
         </axis>
@@ -483,17 +570,17 @@
         <axis>
           <xyz>-2.229862210434419e-07 0.99999999999997313 6.548925364502356e-08</xyz>
           <limit>
-            <lower>-inf</lower>
-            <upper>inf</upper>
-            <effort>inf</effort>
-            <velocity>inf</velocity>
-            <stiffness>100000000</stiffness>
+            <lower>-3.14</lower>
+            <upper>3.14</upper>
+            <effort>100</effort>
+            <velocity>1.0</velocity>
+            <stiffness>100</stiffness>
             <dissipation>1</dissipation>
           </limit>
           <dynamics>
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
+            <damping>0.5</damping>
             <friction>0</friction>
           </dynamics>
         </axis>
@@ -521,6 +608,10 @@
       <pose>0.41463199257850647 0.16881200671195984 0.0035024322569370131 0 0 1.1102230246251568e-16</pose>
       <static>false</static>
       <self_collide>false</self_collide>
+      <joint name='world_anchor_joint' type='fixed'>
+        <parent>world</parent>
+        <child>base_Revolute-1</child> 
+      </joint>
     </model>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
